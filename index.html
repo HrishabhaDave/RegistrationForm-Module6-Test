@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-3 title"><b>Registration Form</b></h1>
+        <form class="row g-3 registrationform">
+            <div class="col-md-6">
+              <label for="first-name" class="form-label">First name</label>
+              <input type="text" class="form-control" id="first-name" onblur="fName()" autocomplete="off">
+              <div class="valid-feedback" id="first-name-valid">
+                First name validated!
+              </div>
+              <div class="invalid-feedback" id="first-name-invalid">
+                Please enter valid First name
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="last-name" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="last-name" onblur="lName()" autocomplete="off">
+              <div class="valid-feedback" id="last-name-valid">
+                Last name validated!
+              </div>
+              <div class="invalid-feedback" id="last-name-invalid">
+                Please enter valid Last name
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="text" class="form-control" id="email" aria-describedby="inputGroupPrepend" onblur="emailf()" autocomplete="off">
+                <div class="valid-feedback" id="email-valid">
+                  Email validated!
+                </div>  
+                <div class="invalid-feedback" id="email-invalid">
+                  Please enter valid Email
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+                <label for="phone-number" class="form-label">Phone Number</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="inputGroupPrepend">+91</span>
+                  <input type="text" class="form-control" id="phone-number" aria-describedby="inputGroupPrepend" onblur="phoneNumberf()" autocomplete="off">
+                  <div class="valid-feedback" id="phone-number-valid">
+                    Phone Number validated!
+                  </div>  
+                  <div class="invalid-feedback" id="phone-number-invalid">
+                    Please provide a valid Phone Number
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+              <label for="batch-no" class="form-label">Batch No.</label>
+              <select class="form-select" id="batch-no" onclick="batchf()">
+                <option value="None" selected>Select Batch No...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <div class="valid-feedback" id="batch-no-valid">
+                Batch No. Selected!
+              </div>  
+              <div class="invalid-feedback" id="batch-no-invalid">
+                Please select a valid Batch No.
+              </div>
+            </div>
+            <div class="col-md-6">
+                <label for="current-module" class="form-label">Current Module</label>
+                <select class="form-select" id="current-module" onclick="currentModulef()">
+                  <option value="None" selected>Select Current Module...</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                </select>
+                <div class="valid-feedback" id="current-module-valid">
+                  Current Module Selected!
+                </div>  
+                <div class="invalid-feedback" id="current-module-invalid">
+                  Please select a valid Module No.
+                </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" onclick="tickf()" id="tnc">
+                <label class="form-check-label" for="tnc">
+                  Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback" id="tnc-invalid">
+                  You must agree before submitting.
+                </div>
+              </div>
+            </div>
+            <div class="col-12 submit-btn">
+              <button class="btn btn-dark btn-lg" type="button" onclick="validate()">Submit form</button>
+            </div>
+        </form>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
